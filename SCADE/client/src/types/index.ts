@@ -1,0 +1,10 @@
+export interface Coordinates { latitude: number; longitude: number }
+export interface Preferences { travelType: string; budget: string; walking: boolean; sustainabilityPreference: number }
+export interface Place { id: string; name: string; address: string; latitude: number; longitude: number; rating?: number; userRatingCount?: number; primaryType?: string; googleMapsUri?: string; businessStatus?: string; priceLevel?: string }
+export interface Recommendation { rank: number; place: Place; score: number; distanceKm: number; explanation: string[]; scores: Record<string, number> }
+export interface Weather { temperature: number; condition: string; humidity: number; windSpeed: number; rainfall?: number }
+export interface RouteStep { instruction: string; distanceMeters: number; startLocation: Coordinates; endLocation: Coordinates; polyline: string }
+export interface WalkingRoute { distanceMeters: number; durationSeconds: number; polyline: string; steps: RouteStep[] }
+export type BusinessCategory = 'restaurant' | 'cafe' | 'bakery' | 'hotel' | 'homestay' | 'handicrafts' | 'local_store' | 'tourism_service';
+export interface LocalBusiness { id: string; name: string; category: BusinessCategory; address: string; latitude: number; longitude: number; phone?: string; website?: string; openingHours?: string[]; openNow?: boolean; businessStatus?: string; rating?: number; userRatingCount?: number; productsAndServices: string[]; sustainability?: { description: string; evidence: string; verified: true }; googleMapsUri: string; source: 'google' | 'local' | 'google+local'; localVerified: boolean; distanceKm: number; score: number; explanation: string[]; scores: Record<string, number>; weights: Record<string, number> }
+export interface BusinessListingInput { name: string; category: BusinessCategory; address: string; latitude: number; longitude: number; phone?: string; website?: string; openingHours?: string[]; productsAndServices?: string[]; sustainabilityClaim?: string; sustainabilityEvidence?: string; submittedBy?: string; rating?: number; userRatingCount?: number }

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1080" height="1920" viewBox="0 0 1080 1920" role="img" aria-labelledby="title desc">
+  <title id="title">S-CADE AR walking navigation mobile mockup</title>
+  <desc id="desc">A smartphone AR navigation interface with a scenic Ooty hillside camera view, turn guidance, route arrow, distance, walking time, map toggle, and exit control.</desc>
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#8fc5db"/><stop offset=".54" stop-color="#e9ead5"/><stop offset="1" stop-color="#d9dfc2"/></linearGradient>
+    <linearGradient id="hillA" x2="0" y2="1"><stop stop-color="#7f9e70"/><stop offset="1" stop-color="#486b4b"/></linearGradient>
+    <linearGradient id="hillB" x2="0" y2="1"><stop stop-color="#5e815c"/><stop offset="1" stop-color="#294d3c"/></linearGradient>
+    <linearGradient id="road" x2="0" y2="1"><stop stop-color="#a7a79a"/><stop offset="1" stop-color="#62685f"/></linearGradient>
+    <linearGradient id="shade" x2="0" y2="1"><stop stop-color="#081811" stop-opacity=".44"/><stop offset=".24" stop-color="#081811" stop-opacity="0"/><stop offset=".63" stop-color="#081811" stop-opacity=".04"/><stop offset="1" stop-color="#081811" stop-opacity=".5"/></linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="14" stdDeviation="20" flood-color="#12251b" flood-opacity=".25"/></filter>
+    <filter id="glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="12" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <!-- Scenic camera view -->
+  <rect width="1080" height="1920" fill="url(#sky)"/>
+  <circle cx="844" cy="263" r="94" fill="#fff1c4" opacity=".76"/>
+  <path d="M0 575 Q125 465 270 550 T550 500 T830 540 T1080 472 V980 H0Z" fill="#a9c3a0" opacity=".72"/>
+  <path d="M0 735 Q160 565 360 665 T690 624 T1080 660 V1140 H0Z" fill="url(#hillA)"/>
+  <path d="M0 885 Q180 700 390 795 T770 735 T1080 798 V1220 H0Z" fill="#527654"/>
+  <!-- tea garden rows -->
+  <g fill="none" stroke="#b3c493" stroke-width="10" opacity=".48">
+    <path d="M-60 1020 Q260 800 580 930 T1150 855"/><path d="M-60 1080 Q260 860 580 990 T1150 915"/><path d="M-60 1140 Q260 920 580 1050 T1150 975"/><path d="M-60 1200 Q260 980 580 1110 T1150 1035"/>
+  </g>
+  <!-- roadside trees -->
+  <g fill="#294c37"><path d="M22 990l80-225 80 225h-48l76 185H0l68-185z"/><path d="M890 932l68-198 70 198h-40l76 178H848l62-178z"/><path d="M160 1098l48-140 52 140h-31l46 125H142l43-125z"/><path d="M740 1047l54-155 56 155h-34l51 133H717l46-133z"/></g>
+  <!-- road leading to destination -->
+  <path d="M370 1920 Q423 1560 464 1338 Q492 1176 503 1060 L579 1060 Q592 1205 627 1360 Q700 1630 780 1920Z" fill="url(#road)"/>
+  <path d="M528 1920 Q528 1530 531 1335 Q533 1180 529 1070" fill="none" stroke="#e8e3c8" stroke-width="10" stroke-dasharray="40 34" opacity=".86"/>
+  <path d="M390 1920 Q442 1555 485 1336 Q510 1180 512 1072" fill="none" stroke="#eee9d4" stroke-width="7" opacity=".8"/>
+  <!-- AR projected walking path -->
+  <path d="M544 1508 C537 1365 527 1252 538 1152 C544 1098 545 1044 540 977" fill="none" stroke="#c5ffae" stroke-width="19" stroke-linecap="round" stroke-dasharray="18 28" opacity=".95" filter="url(#glow)"/>
+  <path d="M544 1508 C537 1365 527 1252 538 1152 C544 1098 545 1044 540 977" fill="none" stroke="#f1ffe5" stroke-width="5" stroke-linecap="round" stroke-dasharray="9 22"/>
+  <rect width="1080" height="1920" fill="url(#shade)"/>
+  <!-- Status bar -->
+  <text x="58" y="70" fill="white" font-family="Arial,sans-serif" font-size="27" font-weight="700">9:41</text>
+  <g fill="none" stroke="white" stroke-width="5" stroke-linecap="round"><path d="M890 55q26-25 52 0M899 67q17-17 34 0M911 79q5-5 10 0"/><path d="M963 51h44a7 7 0 0 1 7 7v27a7 7 0 0 1-7 7h-44a7 7 0 0 1-7-7V58a7 7 0 0 1 7-7z"/><path d="M1015 60h9v22h-9"/></g><rect x="966" y="55" width="37" height="33" rx="3" fill="white"/>
+  <!-- Header brand and controls -->
+  <g filter="url(#shadow)"><rect x="42" y="117" width="996" height="122" rx="30" fill="#10231b" fill-opacity=".82" stroke="#ffffff" stroke-opacity=".16"/></g>
+  <circle cx="104" cy="178" r="31" fill="#dcefd4"/><path d="M104 199c-13-18-21-27-21-39a21 21 0 1 1 42 0c0 12-8 21-21 39zm0-31a8 8 0 1 0 0-16 8 8 0 0 0 0 16z" fill="#315b3e"/>
+  <text x="154" y="170" fill="#fff" font-family="Arial,sans-serif" font-size="27" font-weight="700" letter-spacing="2">S-CADE</text>
+  <text x="154" y="205" fill="#c6d4c8" font-family="Arial,sans-serif" font-size="19" letter-spacing="1.4">CAMERA AR · WALKING</text>
+  <g><rect x="724" y="143" width="156" height="70" rx="20" fill="#ffffff" fill-opacity=".14" stroke="#ffffff" stroke-opacity=".3"/><path d="M753 177h24m-9-10 10 10-10 10" fill="none" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="790" y="185" fill="white" font-family="Arial,sans-serif" font-size="19" font-weight="700">MAP</text></g>
+  <g><rect x="893" y="143" width="119" height="70" rx="20" fill="#6f3733" fill-opacity=".92"/><path d="M923 166l23 24m0-24-23 24" fill="none" stroke="white" stroke-width="4" stroke-linecap="round"/><text x="955" y="185" fill="white" font-family="Arial,sans-serif" font-size="18" font-weight="700">EXIT</text></g>
+  <!-- turn guidance -->
+  <g filter="url(#shadow)"><rect x="42" y="292" width="996" height="184" rx="32" fill="#10231b" fill-opacity=".83" stroke="#ffffff" stroke-opacity=".19"/></g>
+  <circle cx="126" cy="384" r="49" fill="#dff2d7"/><path d="M128 416v-65m0 0-24 24m24-24 24 24" fill="none" stroke="#427247" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="205" y="359" fill="#b9d4b5" font-family="Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="2">NEXT TURN · IN 80 M</text>
+  <text x="205" y="411" fill="white" font-family="Arial,sans-serif" font-size="34" font-weight="700">Continue straight</text>
+  <path d="M955 367l-20 20 20 20" fill="none" stroke="#dbe6dd" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity=".72"/>
+  <!-- destination marker -->
+  <g filter="url(#shadow)"><rect x="227" y="865" width="626" height="74" rx="37" fill="#11251c" fill-opacity=".86" stroke="#d9f5d1" stroke-opacity=".55"/></g>
+  <path d="M282 915c-11-15-18-23-18-33a18 18 0 1 1 36 0c0 10-7 18-18 33zm0-27a7 7 0 1 0 0-14 7 7 0 0 0 0 14z" fill="#c8f1b6"/>
+  <text x="322" y="909" fill="white" font-family="Arial,sans-serif" font-size="22" font-weight="700">Murugan Temple, Elk Hill</text>
+  <!-- directional marker -->
+  <circle cx="540" cy="1260" r="95" fill="#ceffb5" opacity=".2" filter="url(#glow)"/>
+  <path d="M540 1192l-64 79h41v92h46v-92h41z" fill="#f7fff0" stroke="#4b7b48" stroke-width="6" stroke-linejoin="round" filter="url(#shadow)"/>
+  <rect x="66" y="1022" width="230" height="56" rx="28" fill="#10231b" fill-opacity=".78"/>
+  <circle cx="96" cy="1050" r="8" fill="#9fe187"/><text x="118" y="1057" fill="white" font-family="Arial,sans-serif" font-size="18" font-weight="700">GPS CONNECTED</text>
+  <rect x="820" y="1022" width="194" height="56" rx="28" fill="#10231b" fill-opacity=".78"/>
+  <path d="M851 1060a19 19 0 1 1 24-22" fill="none" stroke="#dff2d7" stroke-width="4" stroke-linecap="round"/><path d="M874 1031v12h-12" fill="none" stroke="#dff2d7" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><text x="889" y="1057" fill="white" font-family="Arial,sans-serif" font-size="17" font-weight="700">ON ROUTE</text>
+  <!-- bottom trip card -->
+  <g filter="url(#shadow)"><rect x="42" y="1510" width="996" height="354" rx="36" fill="#fcfdf9"/></g>
+  <rect x="490" y="1530" width="100" height="8" rx="4" fill="#d9dfd5"/>
+  <text x="80" y="1597" fill="#738176" font-family="Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="2">WALKING TO DESTINATION</text>
+  <text x="80" y="1654" fill="#202c24" font-family="Georgia,serif" font-size="36" font-weight="700">Murugan Temple, Elk Hill</text>
+  <path d="M80 1690h920" stroke="#e8ece5" stroke-width="2"/>
+  <g text-anchor="middle" font-family="Arial,sans-serif">
+    <text x="240" y="1761" fill="#243329" font-size="36" font-weight="700">1.2 km</text><text x="240" y="1798" fill="#7a857c" font-size="18">remaining</text>
+    <path d="M420 1727v86" stroke="#e1e7df" stroke-width="2"/>
+    <text x="540" y="1761" fill="#243329" font-size="36" font-weight="700">18 min</text><text x="540" y="1798" fill="#7a857c" font-size="18">estimated walk</text>
+    <path d="M720 1727v86" stroke="#e1e7df" stroke-width="2"/>
+    <text x="856" y="1761" fill="#243329" font-size="36" font-weight="700">Step 3</text><text x="856" y="1798" fill="#7a857c" font-size="18">of 8</text>
+  </g>
+  <rect x="42" y="1885" width="996" height="11" rx="5" fill="#ffffff" opacity=".82"/><rect x="416" y="1885" width="248" height="11" rx="5" fill="#304236" opacity=".9"/>
+</svg>

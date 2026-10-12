@@ -1,0 +1,18 @@
+import { Router } from 'express';
+import { nearby, recommendations, weather, locationSearch } from '../controllers/apiController';
+import { walkingRoute } from '../controllers/routeController';
+import { addVerifiedBusiness, discover, pendingSubmissions, submitBusiness, verifySubmission } from '../controllers/businessController';
+import { requireBusinessAdmin } from '../middleware/businessAdmin';
+const router = Router();
+router.get('/health', (_req, res) => res.json({ status: 'ok', service: 'S-CADE Sustainable Tourism API' }));
+router.get('/places/nearby', nearby);
+router.get('/recommendations', recommendations);
+router.get('/weather', weather);
+router.get('/places/search', locationSearch);
+router.get('/routes/walking', walkingRoute);
+router.get('/businesses/nearby', discover);
+router.post('/businesses/submissions', submitBusiness);
+router.get('/businesses/admin/pending', requireBusinessAdmin, pendingSubmissions);
+router.post('/businesses/admin', requireBusinessAdmin, addVerifiedBusiness);
+router.patch('/businesses/admin/:id/verify', requireBusinessAdmin, verifySubmission);
+export default router;
